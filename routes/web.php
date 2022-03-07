@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\KelasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [AdminController::class, 'index']);
+Route::resource('/kelas', KelasController::class)->except('show');
 
 
